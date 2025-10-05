@@ -19,24 +19,18 @@ public class PlayerRotationController : PausedBehaviour
         playerBody.rotation = Quaternion.identity;
 
         // Съедаем первый импульс мыши (Unity иногда даёт "мусор" на старте)
-        Input.GetAxis("Mouse X");
-        Input.GetAxis("Mouse Y");
+        //Input.GetAxis("Mouse X");
+        //Input.GetAxis("Mouse Y");
     }
 
     protected override void GameUpdate()
     {
-        // Пропускаем первый кадр, чтобы избежать скачка камеры
-        if (!firstFrameConsumed)
-        {
-            Input.GetAxis("Mouse X");
-            Input.GetAxis("Mouse Y");
-            firstFrameConsumed = true;
-            return;
-        }
 
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
+        //Debug.Log(mouseX + " " + mouseY);
+        
         // Игнорируем микродвижения мыши
         if (Mathf.Abs(mouseX) < 0.001f) mouseX = 0f;
         if (Mathf.Abs(mouseY) < 0.001f) mouseY = 0f;

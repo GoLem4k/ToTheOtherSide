@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 
@@ -16,6 +17,12 @@ public class GrabController : PausedBehaviour
     [SerializeField] private GameObject targetObject = null;
     [SerializeField] private GameObject grabbedObject = null;
 
+    private void Start()
+    {
+        eIcon.SetActive(true);
+        eIcon.SetActive(false);
+    }
+
     protected override void GameUpdate()
     {
         HandleRaycast();
@@ -30,7 +37,7 @@ public class GrabController : PausedBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
         {
-            if (hit.collider.CompareTag("Grapable") && !isGrabbing)
+            if (hit.collider.CompareTag("PuzzleObject") && !isGrabbing)
             {
                 eIcon.SetActive(true);
                 targetObject = hit.collider.gameObject;
