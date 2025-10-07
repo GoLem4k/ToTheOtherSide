@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pedestal : Entity
@@ -9,7 +8,11 @@ public class Pedestal : Entity
     [SerializeField] private Collider _collider;
     [SerializeField] private Transform _contentT;
     [SerializeField] private Material _material;
-    
+
+    private void Start()
+    {
+        _material = GetComponent<MeshRenderer>().material;
+    }
 
 
     private void OnCollisionEnter(Collision other)
@@ -18,6 +21,7 @@ public class Pedestal : Entity
         {
             _material.color = _hasContentColor;
             other.transform.position = _contentT.position;
+            other.transform.rotation = _contentT.rotation;
         }
     }
 

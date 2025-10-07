@@ -34,9 +34,10 @@ public class GrabController : PausedBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
         Debug.DrawRay(ray.origin, ray.direction * rayDistance, Color.red);
-
+        
         if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
         {
+            //Debug.Log("Raycast Hit: " + hit.collider.name);
             if (hit.collider.CompareTag("PuzzleObject") && !isGrabbing)
             {
                 eIcon.SetActive(true);
@@ -141,7 +142,6 @@ public class GrabController : PausedBehaviour
 
             if (rb != null)
             {
-                // Плавное движение через Lerp
                 rb.MovePosition(targetPos);
             }
             else
