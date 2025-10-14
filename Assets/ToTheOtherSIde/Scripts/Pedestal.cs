@@ -25,6 +25,15 @@ public class Pedestal : Entity
         }
     }
 
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.transform.tag == "PuzzleObject" && other.transform.position.magnitude > Mathf.Epsilon)
+        {
+            other.transform.position = _contentT.position;
+            other.transform.rotation = _contentT.rotation;
+        }
+    }
+
     private void OnCollisionExit(Collision other)
     {
         if (other.transform.tag == "PuzzleObject")
