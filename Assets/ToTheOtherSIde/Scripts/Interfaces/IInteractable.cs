@@ -1,4 +1,8 @@
+using UnityEngine;
+
 public interface IInteractable
 {
-    void Interact();
+    bool CanInteract(PlayerInteractor player);
+    void Interact(PlayerInteractor player);
+    Transform GetTransform(); // Для удобства, чтобы получать позицию при наведении
 }

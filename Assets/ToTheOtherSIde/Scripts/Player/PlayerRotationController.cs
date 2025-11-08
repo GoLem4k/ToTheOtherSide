@@ -6,7 +6,6 @@ public class PlayerRotationController : PausedBehaviour
     [SerializeField] private Transform playerBody;
 
     private float xRotation = 0f;
-    private bool firstFrameConsumed = false;
 
     void Start()
     {
