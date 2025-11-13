@@ -3,7 +3,7 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Pedeslat boatPedestal;
+    [SerializeField] private Pedestal boatPedestal;
     [SerializeField] private Transform pointA;
     [SerializeField] private Transform pointB;
     [SerializeField] private Transform boat;

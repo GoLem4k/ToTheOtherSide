@@ -85,7 +85,7 @@ public class PlayerInteractor : MonoBehaviour
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, interactRange, interactLayer))
         {
-            if (hit.collider.TryGetComponent(out Pedeslat pedestal))
+            if (hit.collider.TryGetComponent(out Pedestal pedestal))
             {
                 if (pedestal.CanPlaceItem(heldItem))
                 {

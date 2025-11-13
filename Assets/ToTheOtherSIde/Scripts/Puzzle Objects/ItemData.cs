@@ -7,6 +7,7 @@ public class ItemData : ScriptableObject
     public GameObject prefab;
     public Sprite icon;
     public ItemType type; // enum, если нужно разграничение
+    public ItemType destroyedByType;
 }
 
 public enum ItemType

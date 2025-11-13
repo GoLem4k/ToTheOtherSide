@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Pedeslat : MonoBehaviour, IInteractable
+public class Pedestal : MonoBehaviour, IInteractable
 {
     [Header("Pedestal Setup")]
     public Transform placePoint;
