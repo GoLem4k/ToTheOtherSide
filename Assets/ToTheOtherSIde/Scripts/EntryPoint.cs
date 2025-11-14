@@ -1,88 +1,48 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
 using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private Pedestal[] _sideAPedestals;
-    [SerializeField] private Pedestal[] _sideBPedestals;
-
-    private List<ItemData> _itemBufferA;
-    private List<ItemData> _itemBufferB;
-
-    private void Awake()
-    {
-        _itemBufferA = new List<ItemData>();
-        _itemBufferB = new List<ItemData>();
-    }
+    [SerializeField] private List<Pedestal> _sideAPedestals;
+    [SerializeField] private List<Pedestal> _sideBPedestals;
+    [SerializeField] private Pedestal _controlPedestal;
 
     private void OnEnable()
     {
-        foreach (var pedestal in _sideAPedestals)
+        _controlPedestal.OnItemPlaced += RealizeObjectInteractions;
+    }
+
+    private void RealizeObjectInteractions(ItemData item)
+    {
+        ObjectInteractions(_sideAPedestals);
+        ObjectInteractions(_sideBPedestals);
+    }
+
+    private void ObjectInteractions(List<Pedestal> pedestals)
+    {
+        var filled = pedestals.FindAll(p => p.currentItem != null);
+
+        filled.Sort((p1, p2) =>
+            p1.currentItem.type.CompareTo(p2.currentItem.type));
+
+        foreach (var current in filled)
         {
-            pedestal.OnItemPlaced += AddItemToBufferA;
-            pedestal.OnItemRemoved += RemoveItemFromBufferA;
+            foreach (var target in filled)
+            {
+                if (current.currentItem == null || target.currentItem == null)
+                    continue;
+
+                if (current.currentItem.destroyedByType == target.currentItem.type)
+                {
+                    current.RemoveItem();
+                    break; // выходим из внутреннего цикла
+                }
+            }
+
+            if (current.currentItem == null)
+                continue; // текущий предмет уничтожён – пропускаем оставшиеся target
         }
-
-        foreach (var pedestal in _sideBPedestals)
-        {
-            pedestal.OnItemPlaced += AddItemToBufferB;
-            pedestal.OnItemRemoved += RemoveItemFromBufferB;
-        }
-    }
-    
-    private void OnDisable()
-    {
-        foreach (var pedestal in _sideAPedestals)
-        {
-            pedestal.OnItemPlaced -= AddItemToBufferA;
-            pedestal.OnItemRemoved -= RemoveItemFromBufferA;
-        }
-
-        foreach (var pedestal in _sideBPedestals)
-        {
-            pedestal.OnItemPlaced -= AddItemToBufferB;
-            pedestal.OnItemRemoved -= RemoveItemFromBufferB;
-        }
-    }
-
-    private void AddItemToBufferA(ItemData item)
-    {
-        _itemBufferA.Add(item);
-        PrintItems();
-    }
-
-    private void AddItemToBufferB(ItemData item)
-    {
-        _itemBufferB.Add(item);
-        PrintItems();
-    }
-
-    private void RemoveItemFromBufferA(ItemData item)
-    {
-        _itemBufferA.Remove(item);
-        PrintItems();
-    }
-
-    private void RemoveItemFromBufferB(ItemData item)
-    {
-        _itemBufferB.Remove(item);
-        PrintItems();
-    }
-
-    private void PrintItems()
-    {
-        string aItems = string.Join(", ", _itemBufferA.Select(i => i.name));
-        string bItems = string.Join(", ", _itemBufferB.Select(i => i.name));
-        Debug.Log($"A: [{aItems}]  B: [{bItems}]");
-    }
-
-    
-    private void ClearItemBuffer()
-    {
-        
     }
 
 }

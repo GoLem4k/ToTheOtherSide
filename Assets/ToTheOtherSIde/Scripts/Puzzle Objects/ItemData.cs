@@ -12,6 +12,9 @@ public class ItemData : ScriptableObject
 
 public enum ItemType
 {
-    None,
-    Box
+    Box = -1,
+    None = 0,
+    Grain = 1,
+    Chicken = 2,
+    Fox = 3
 }

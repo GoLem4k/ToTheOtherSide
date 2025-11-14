@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9ac1212720a59a4babcac3fc00b1482, type: 3}
-  m_Name: Box
+  m_Name: Grain
   m_EditorClassIdentifier: 
   id: box
-  prefab: {fileID: 5741973894836968615, guid: aebf73bf9060b524da1b19a2e4ca6c08, type: 3}
+  prefab: {fileID: 2255814444334194495, guid: ea3ee6d1aa48bcc4f9d80cabc806fa75, type: 3}
   icon: {fileID: 0}
-  type: -1
-  destroyedByType: 0
+  type: 1
+  destroyedByType: 2
