@@ -8,7 +8,6 @@ public class ItemCore : MonoBehaviour, IInteractable
     [SerializeField] private ItemData itemData;
     [SerializeField] private float defaultInteractionRange = 2f;
     private IItemContainer _container;
-
     
     private Rigidbody _rb;
     private Collider _collider;
@@ -108,6 +107,11 @@ public class ItemCore : MonoBehaviour, IInteractable
     public void Unfreeze()
     {
         _rb.constraints = RigidbodyConstraints.None;
+    }
+
+    public ItemType GetItemType()
+    {
+        return itemData.type;
     }
     
     // // Предмет можно взять если он не взят и если расстояние между объектом и игроком позволяет сделать это

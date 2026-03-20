@@ -1,16 +1,24 @@
+using System;
 using UnityEngine;
 
 public class Pedestal : MonoBehaviour, IInteractable, IItemUser, IItemContainer
 {
     private ItemCore _storedItem;
     [SerializeField] private Transform placePoint;
-
+    private bool _isLocked = false;
+    
+    public event Action<ItemCore> OnItemPlaced;
+    public event Action<ItemCore> OnItemTaked;
     // взять предмет
-    public InteractionResult Interact(InteractionContext context)
+    public virtual InteractionResult Interact(InteractionContext context)
     {
         if (_storedItem == null) return default;
-
+        if (_isLocked) return default;
+        
         var item = _storedItem;
+        OnItemTaked?.Invoke(_storedItem);
+        OnInteract();
+
         _storedItem = null;
 
         item.Grab(context.Interactor);
@@ -36,6 +44,9 @@ public class Pedestal : MonoBehaviour, IInteractable, IItemUser, IItemContainer
         // Объект узнает, что он в контейнере
         _storedItem.SetContainer(this);
         
+        OnItemPlaced?.Invoke(_storedItem);
+        OnInteractWithItem();
+        
         return new InteractionResult
         {
             ConsumedHeldItem = true
@@ -47,8 +58,29 @@ public class Pedestal : MonoBehaviour, IInteractable, IItemUser, IItemContainer
         if (_storedItem == item)
         {
             _storedItem.Unfreeze();
+            OnItemTaked?.Invoke(_storedItem);
             _storedItem = null;
             Debug.Log("Пьедестал: предмет удалён");
         }
+    }
+
+    public void LockItem()
+    {
+        _isLocked = true;
+    }
+
+    public void UnlockItem()
+    {
+        _isLocked = false;
+    }
+
+    protected virtual void OnInteract()
+    {
+        
+    }
+
+    protected virtual void OnInteractWithItem()
+    {
+        
     }
 }
