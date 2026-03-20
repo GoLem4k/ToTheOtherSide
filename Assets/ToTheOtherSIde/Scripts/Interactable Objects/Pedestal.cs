@@ -1,111 +1,54 @@
-using System;
 using UnityEngine;
 
-public class Pedestal : MonoBehaviour, IInteractable
+public class Pedestal : MonoBehaviour, IInteractable, IItemUser, IItemContainer
 {
-    [Header("Pedestal Setup")]
-    public Transform placePoint;
-    [Tooltip("Если хотите, поместите стартовый ItemData в инспекторе")]
-    public ItemData currentItem;
-    private GameObject placedObject;
+    private ItemCore _storedItem;
+    [SerializeField] private Transform placePoint;
 
-    [Header("Start options")]
-    [Tooltip("Если true — вызовет OnItemPlaced при старте, иначе только отобразит предмет без триггера")]
-    public bool invokeOnStart = false;
-
-    [Tooltip("Если true - Нельзя взять объект с пьедестала")]
-    public bool locked = false;
-
-    public bool HasItem => currentItem != null;
-
-    // СОБЫТИЯ
-    public event Action<ItemData> OnItemPlaced;
-    public event Action<ItemData> OnItemRemoved;
-
-    public virtual bool CanPlaceItem(ItemData item) => !HasItem;
-
-    public Transform GetPlacePoint() => placePoint != null ? placePoint : transform;
-
-    private void Start()
+    // взять предмет
+    public InteractionResult Interact(InteractionContext context)
     {
-        // Если в инспекторе задан currentItem — отобразим его
-        if (currentItem != null)
+        if (_storedItem == null) return default;
+
+        var item = _storedItem;
+        _storedItem = null;
+
+        item.Grab(context.Interactor);
+        return new InteractionResult
         {
-            // Создаём визуал (не вызываем PlaceItem, чтобы не дублировать логику событий,
-            // если нужно триггерить событие при старте - используем invokeOnStart)
-            SpawnPlacedObject(currentItem);
-
-            if (invokeOnStart)
-                OnItemPlaced?.Invoke(currentItem);
-        }
+            TakenItem = item
+        };
     }
 
-    public virtual void Interact(PlayerInteractor player)
+    // поставить предмет
+    public InteractionResult InteractWithItem(InteractionContext context)
     {
-        if (HasItem && player.heldItem == null)
+        if (_storedItem != null) return default;
+
+        _storedItem = context.HeldItem;
+
+        _storedItem.transform.SetParent(placePoint);
+        _storedItem.transform.localPosition = Vector3.zero;
+        _storedItem.transform.localRotation = Quaternion.identity;
+
+        _storedItem.SetGrabbedState(false);
+
+        // Объект узнает, что он в контейнере
+        _storedItem.SetContainer(this);
+        
+        return new InteractionResult
         {
-            player.TakeItem(currentItem);
-            RemoveItem();
-        }
-        else if (!HasItem && player.heldItem != null)
-        {
-            PlaceItem(player.DropItem());
-        }
-    }
-
-    public bool CanInteract(PlayerInteractor player)
-    {
-        return ((HasItem && player.heldItem == null) ||
-               (!HasItem && player.heldItem != null)) && !locked;
-    }
-
-    public virtual void PlaceItem(ItemData item)
-    {
-        Clear();
-        currentItem = item;
-        SpawnPlacedObject(item);
-
-        // Генерируем событие — кто подписан, отреагирует
-        OnItemPlaced?.Invoke(item);
-    }
-
-    public virtual void RemoveItem()
-    {
-        if (currentItem == null) return;
-
-        ItemData removed = currentItem;
-        Clear();
-
-        // Генерируем событие удаления
-        OnItemRemoved?.Invoke(removed);
-    }
-
-    // Вынесено в отдельный метод, чтобы избежать дублирования
-    protected void SpawnPlacedObject(ItemData item)
-    {
-        if (item == null) return;
-
-        // уничтожаем старую визуализацию, если есть
-        if (placedObject != null) DestroyImmediate(placedObject);
-
-        if (placePoint != null)
-            placedObject = Instantiate(item.prefab, placePoint.position, placePoint.rotation, placePoint);
-        else
-            placedObject = Instantiate(item.prefab, transform.position, transform.rotation, transform);
-
-        // защищаем от искажений родителя
-        //placedObject.transform.localScale = Vector3.one;
-    }
-
-    public void Clear()
-    {
-        if (placedObject != null) Destroy(placedObject);
-        currentItem = null;
+            ConsumedHeldItem = true
+        };
     }
     
-    public Transform GetTransform()
+    public void RemoveItem(ItemCore item)
     {
-        return transform;
+        if (_storedItem == item)
+        {
+            _storedItem.Unfreeze();
+            _storedItem = null;
+            Debug.Log("Пьедестал: предмет удалён");
+        }
     }
-
 }

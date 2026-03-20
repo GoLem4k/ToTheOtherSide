@@ -1,8 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public interface IInteractable
 {
-    bool CanInteract(PlayerInteractor player);
-    void Interact(PlayerInteractor player);
-    Transform GetTransform(); // Для удобства, чтобы получать позицию при наведении
+    InteractionResult Interact(InteractionContext context);
 }
+// public enum InteractionType
+// {
+//     Grab = KeyCode.E,
+//     Put = KeyCode.E,
+//     Drop = KeyCode.G
+// }
