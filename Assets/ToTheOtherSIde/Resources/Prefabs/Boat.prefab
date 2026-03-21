@@ -363,9 +363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoverBuSpline
   _rails: []
   speed: 0.2
-  _currentPathStartId: 0
-  _currentPathEndId: 0
-  _stopAtPointId: 0
 --- !u!4 &7589187239850597447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3d162343358fff4478c2bf3cc59ad728, type: 3}

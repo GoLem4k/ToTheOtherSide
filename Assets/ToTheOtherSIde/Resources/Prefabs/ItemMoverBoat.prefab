@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5346987597555822101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3009734183200484207}
+  - component: {fileID: 8275385774547832972}
+  m_Layer: 11
+  m_Name: Barrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3009734183200484207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346987597555822101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8193545673162897779}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8275385774547832972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346987597555822101}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &5535913489948676816
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +146,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6405772909635393631}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3009734183200484207}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
       insertIndex: -1
@@ -102,10 +158,10 @@ PrefabInstance:
       addedObject: {fileID: 7996674646919334812}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1462536632138888029}
+      addedObject: {fileID: 771798878517862950}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 771798878517862950}
+      addedObject: {fileID: 5997797177477412186}
   m_SourcePrefab: {fileID: 100100000, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
 --- !u!4 &8193545673162897779 stripped
 Transform:
@@ -129,8 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d40404c91d7fe4e8f43c5e82320eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoverBySpline
-  splines:
-  - {fileID: 0}
+  _rails: []
   speed: 0.2
 --- !u!136 &7996674646919334812
 CapsuleCollider:
@@ -155,8 +210,23 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!64 &1462536632138888029
-MeshCollider:
+--- !u!114 &771798878517862950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862664931433014217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c5dd8e02341db4c8ebdbca93b32e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemMoverBoat
+  placePoint: {fileID: 6405772909635393631}
+  _lockOnMove: 1
+  _Mover: {fileID: 5620245793065721869}
+--- !u!65 &5997797177477412186
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -173,21 +243,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 607041393620525176, guid: e7438ce64fdd94346836c7adbf606594, type: 3}
---- !u!114 &771798878517862950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8862664931433014217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10c5dd8e02341db4c8ebdbca93b32e3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemMoverBoat
-  placePoint: {fileID: 6405772909635393631}
-  _Mover: {fileID: 5620245793065721869}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.25, z: 0}

@@ -1,24 +1,24 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class PathChanger : MonoBehaviour
+public class PathChanger : ButtonCore
 {
-    [SerializeField] private MoverBySpline _mover;
-    private void Start()
-    {
-        StartCoroutine(WaitAndChangePath());
-    }
+    [SerializeField] private MoverBySpline _moverBySpline;
+    [SerializeField] private int[] _pathsId;
+    private int _currentPathId = 0;
 
-    public IEnumerator WaitAndChangePath()
+    protected override void OnButtonClicked()
     {
-        while (true)
+        _currentPathId++;
+        if (_currentPathId >= _pathsId.Length) _currentPathId = 0;
+        if (_currentPathId < 0 || _currentPathId >= _pathsId.Length)
         {
-            yield return new WaitForSeconds(15.0f);
-            _mover.SetCurrentPath(1);
-            yield return new WaitForSeconds(15.0f);
-            _mover.SetCurrentPath(0);
+            Debug.LogWarning("Неверный индекс для смены пути в PathChanger");
+            return;
         }
+        _moverBySpline.SetCurrentPath(_pathsId[_currentPathId]);
     }
 }

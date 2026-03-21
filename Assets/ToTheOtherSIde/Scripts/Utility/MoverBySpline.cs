@@ -80,6 +80,11 @@ public class MoverBySpline : MonoBehaviour
 
     public void SetCurrentPath(int splineIndex)
     {
+        if (_isMoving)
+        {
+            Debug.LogWarning("Target is moving, can't change path");
+            return;
+        };
         if (splineIndex < 0 || splineIndex >= _rails.Length)
         {
             Debug.LogWarning("Неверный индекс сплайна");
