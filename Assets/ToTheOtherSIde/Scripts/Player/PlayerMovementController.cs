@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -24,6 +25,17 @@ public class PlayerMovementController : PausedBehaviour
         controller = GetComponent<CharacterController>();
     }
 
+    private void Update()
+    { 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Или если нужно обновить CharacterController
+            controller.enabled = false;
+            transform.position = new Vector3(0f, 2f, 0f);
+            controller.enabled = true;
+        }
+    }
+    
     protected override void GameFixedUpdate()
     {
         if (currentPlatform != null)
@@ -45,7 +57,7 @@ public class PlayerMovementController : PausedBehaviour
 
             // применяем всё вместе
             controller.Move(platformDelta + rotationDelta);
-
+            
             // обновляем кеш
             lastPlatformPosition = currentPlatform.position;
             lastPlatformRotation = currentPlatform.rotation;

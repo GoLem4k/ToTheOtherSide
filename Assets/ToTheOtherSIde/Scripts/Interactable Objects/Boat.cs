@@ -1,21 +1,12 @@
 using UnityEngine;
 
-public class Boat : Pedestal
+public class Boat : ItemMoverBoat
 {
-    [SerializeField] protected MoverBySpline _Mover;
-
-    protected override void OnInteract()
-    {
-        _Mover.Stop();
-    }
+    [SerializeField] private BoatSmartArea _SmartArea;
 
     protected override void OnInteractWithItem()
     {
-        if (_Mover.IsStoppedOnPath())
-        {
-            _Mover.ChangeMoveDirection();
-            _Mover.ContinueMove();
-        }
-        else _Mover.StartMove();
+        if (_SmartArea.ItemsCountInZone != 1) return;
+        base.OnInteractWithItem();
     }
 }

@@ -95,7 +95,6 @@ public class PlayerInteractor : MonoBehaviour
             handsGrab.SetActive(false);
             handsDefault.SetActive(true);
         }
-        
     }
 
     private void TryInteract()

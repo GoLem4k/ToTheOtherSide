@@ -7,8 +7,6 @@ public class MoverBySpline : MonoBehaviour
     [Header("Splines")]
     [SerializeField] private Rail[] _rails;
 
-    [SerializeField] private SplineInstantiate[] splinesVisual;
-
     [Header("Movement")]
     [SerializeField] private float speed = 2f;
     
@@ -16,27 +14,46 @@ public class MoverBySpline : MonoBehaviour
     public event Action OnStartMoving;
     public event Action OnStopMoving;
 
+    private Quaternion _rotationOffset;
     private SplineContainer _currentSpline;
     private float _t;
     private bool _isMoving;
     private bool _isMovingBackward;
+    private int _currentPathStartId;
+    private int _currentPathEndId;
+    private int _stopAtPointId;
 
     private void Awake()
     {
         _t = 0f;
         _isMoving = false;
         _isMovingBackward = false;
+        _stopAtPointId = 1;
         if (_rails == null)
         {
             Debug.LogWarning("MoverBySpline splines is null");
             return;
         }
-        _currentSpline = _rails[0].Path;
+        SetCurrentPath(0);
     }
 
     public void StartMove()
     {
+        if (_stopAtPointId != _currentPathStartId && _stopAtPointId != _currentPathEndId) return;
+
+        if (_stopAtPointId == _currentPathStartId) _isMovingBackward = false;
+        if (_stopAtPointId == _currentPathEndId) _isMovingBackward = true;
+
         _t = (_isMovingBackward) ? 1f : 0f;
+
+        // сохраняем разницу между текущим поворотом и сплайном
+        Vector3 forward = _currentSpline.EvaluateTangent(_t);
+        if (forward != Vector3.zero)
+        {
+            Quaternion splineRotation = Quaternion.LookRotation(forward);
+            _rotationOffset = Quaternion.Inverse(splineRotation) * transform.rotation;
+        }
+
         _isMoving = true;
         OnStartMoving?.Invoke();
     }
@@ -77,6 +94,8 @@ public class MoverBySpline : MonoBehaviour
         _rails[splineIndex].VisualNotActive.SetActive(false);
         _rails[splineIndex].VisualActive.SetActive(true);
         _currentSpline = _rails[splineIndex].Path;
+        _currentPathStartId = _rails[splineIndex].PathStartId;
+        _currentPathEndId = _rails[splineIndex].PathEndId;
         Debug.Log($"Путь изменён на {splineIndex}");
     }
     
@@ -93,6 +112,7 @@ public class MoverBySpline : MonoBehaviour
         {
             normalizedT = 1f;
             Stop();
+            _stopAtPointId = _currentPathEndId;
             _isMovingBackward = true;
         }
         
@@ -100,6 +120,7 @@ public class MoverBySpline : MonoBehaviour
         {
             normalizedT = 0f;
             Stop();
+            _stopAtPointId = _currentPathStartId;
             _isMovingBackward = false;
         }
 
@@ -111,7 +132,8 @@ public class MoverBySpline : MonoBehaviour
         Vector3 forward = _currentSpline.EvaluateTangent(normalizedT);
         if (forward != Vector3.zero)
         {
-            transform.rotation = Quaternion.LookRotation(forward);
+            Quaternion splineRotation = Quaternion.LookRotation(forward);
+            transform.rotation = splineRotation * _rotationOffset;
         }
     }
 
@@ -127,4 +149,6 @@ public class Rail
     public SplineContainer Path;
     public GameObject VisualActive;
     public GameObject VisualNotActive;
+    public int PathStartId;
+    public int PathEndId;
 }
