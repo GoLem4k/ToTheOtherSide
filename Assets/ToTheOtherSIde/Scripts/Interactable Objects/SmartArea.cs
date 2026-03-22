@@ -59,7 +59,7 @@ public class SmartArea : MonoBehaviour
         // --- предмет ---
         if (other.TryGetComponent(out ItemCore item))
         {
-            if (IsStillInside(other)) return;
+            //if (IsStillInside(other)) return;
             if (_items.Remove(item))
             {
                 OnItemExit?.Invoke(item);
@@ -68,22 +68,22 @@ public class SmartArea : MonoBehaviour
         }
     }
     
-    private bool IsStillInside(Collider target)
-    {
-        Collider zoneCollider = GetComponent<Collider>();
-
-        Collider[] hits = Physics.OverlapBox(
-            zoneCollider.bounds.center,
-            zoneCollider.bounds.extents,
-            zoneCollider.transform.rotation
-        );
-
-        foreach (var hit in hits)
-        {
-            if (hit == target)
-                return true;
-        }
-
-        return false;
-    }
+    // private bool IsStillInside(Collider target)
+    // {
+    //     Collider zoneCollider = GetComponent<Collider>();
+    //
+    //     Collider[] hits = Physics.OverlapBox(
+    //         zoneCollider.bounds.center,
+    //         zoneCollider.bounds.extents,
+    //         zoneCollider.transform.rotation
+    //     );
+    //
+    //     foreach (var hit in hits)
+    //     {
+    //         if (hit == target)
+    //             return true;
+    //     }
+    //
+    //     return false;
+    // }
 }

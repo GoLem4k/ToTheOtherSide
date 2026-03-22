@@ -17,3 +17,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   type: 2
   destroyedByType: 3
+  metamorphosisByType: -1
+  metamorphosisInto: {fileID: 0}

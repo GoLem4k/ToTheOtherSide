@@ -16,4 +16,6 @@ MonoBehaviour:
   prefab: {fileID: 5854979400522192, guid: 7b2107d888bd941469c58a6f5cb9a2c8, type: 3}
   icon: {fileID: 0}
   type: 3
-  destroyedByType: 0
+  destroyedByType: -1
+  metamorphosisByType: -1
+  metamorphosisInto: {fileID: 0}

@@ -10,13 +10,17 @@ public class ItemData : ScriptableObject
     public Sprite icon;
     public ItemType type; // enum, если нужно разграничение
     public ItemType destroyedByType;
+    public ItemType metamorphosisByType;
+    public GameObject metamorphosisInto;
 }
 
 public enum ItemType
 {
-    Box = -1,
-    None = 0,
+    None = -1,
+    Box = 0,
     Grain = 1,
     Chicken = 2,
-    Fox = 3
+    Fox = 3,
+    Nut = 4,
+    Squirrel = 5
 }

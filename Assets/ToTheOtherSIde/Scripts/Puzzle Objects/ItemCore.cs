@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemCore : MonoBehaviour, IInteractable
@@ -12,6 +13,7 @@ public class ItemCore : MonoBehaviour, IInteractable
     private Rigidbody _rb;
     private Collider _collider;
     private bool _isGrabbed = false;
+    private bool _isMetamorphosed = false;
     
     private void Awake()
     {
@@ -51,15 +53,6 @@ public class ItemCore : MonoBehaviour, IInteractable
 
         return default;
     }
-
-    // private void Grab(GameObject interactor)
-    // {
-    //     gameObject.transform.parent = interactor.transform.Find("Body/GrabPointer");
-    //     transform.localPosition = Vector3.zero;
-    //     transform.localRotation = Quaternion.identity;
-    //     SetGrabbedState(true);
-    //     Debug.Log($"Объект {itemData.id} взят в руки.");
-    // }
     
     public void Grab(GameObject interactor)
     {
@@ -114,63 +107,42 @@ public class ItemCore : MonoBehaviour, IInteractable
         return itemData.type;
     }
     
-    // // Предмет можно взять если он не взят и если расстояние между объектом и игроком позволяет сделать это
-    // public bool CanInteract(GameObject interactor, InteractionType type)
-    // {
-    //     switch (type)
-    //     {
-    //         case InteractionType.Grab:
-    //             if (_isGrabbed)
-    //             {
-    //                 Debug.LogWarning("Объект уже взят!");
-    //                 return false;
-    //             }
-    //             if (Vector3.Distance(transform.position, interactor.transform.position) <= itemData.interactionRange)
-    //             {
-    //                 Debug.LogWarning("Объект вне зоны взаимодействия");
-    //                 return false;
-    //             }
-    //             return true;
-    //         default:
-    //             Debug.LogWarning($"Взаимодействие отклонено, код взаимодействия: {type}");
-    //             break;
-    //     }
-    //     return false;
-    // }
-    //
-    // // По уполчанию предмет можно только взять
-    // public void Interact(GameObject interactor, InteractionType type)
-    // {
-    //     switch (type)
-    //     {
-    //         case InteractionType.Grab:
-    //             gameObject.transform.parent = interactor.transform.Find("GrabPointer");
-    //             transform.position = interactor.transform.position;
-    //             _isGrabbed = true;
-    //             break;
-    //         default:
-    //             Debug.LogWarning($"Взаимодействие отклонено, код взаимодействия: {type}");
-    //             break;
-    //     }
-    // }
-    //
-    // public void Drop(GameObject grabber)
-    // {
-    //     if (!_isGrabbed)
-    //     {
-    //         Debug.LogWarning("Объект не взят");
-    //     }
-    //     
-    //     _isGrabbed = false;
-    //     
-    //     // Включаем физику
-    //     transform.SetParent(null);
-    //     _rb.isKinematic = false;
-    //     _rb.useGravity = true;
-    //     
-    //     // Небольшой толчок при броске
-    //     _rb.AddForce(grabber.transform.forward * 5f, ForceMode.Impulse);
-    //     
-    //     Debug.Log($"[{gameObject.name}] Брошен");
-    // }
+    // ----------Ближнее взаимодействие предметов----------
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out ItemCore item))
+        {
+            if (!_isMetamorphosed) CheckForMetamorphosis(item.GetItemType());
+            CheckForDestroy(item.GetItemType());
+        }
+    }
+
+    public void CheckForMetamorphosis(ItemType itemType)
+    {
+        if (itemType == itemData.metamorphosisByType)
+        {
+            Instantiate(itemData.metamorphosisInto, transform.position, transform.rotation);
+            _isMetamorphosed = true;
+            OnMetamorphosis(itemType);
+            Destroy(gameObject);
+        }
+    }
+    
+    public void CheckForDestroy(ItemType itemType)
+    {
+        if (itemType == itemData.destroyedByType)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    protected virtual void OnMetamorphosis(ItemType itemType)
+    {
+        Debug.Log($"Метаморфоза! Объект {itemData.id} был превращен объектом {itemType}");
+    }
+
+    public void OnDestroy()
+    {
+        Debug.Log($"Объект {itemData.id} был уничтожен!");
+    }
 }
