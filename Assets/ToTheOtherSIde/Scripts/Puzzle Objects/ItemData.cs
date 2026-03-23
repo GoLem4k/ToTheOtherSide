@@ -22,5 +22,6 @@ public enum ItemType
     Chicken = 2,
     Fox = 3,
     Nut = 4,
-    Squirrel = 5
+    PeeledNut = 5,
+    Squirrel = 6
 }
