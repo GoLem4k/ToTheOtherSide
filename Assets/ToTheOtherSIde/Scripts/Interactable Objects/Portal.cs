@@ -7,6 +7,7 @@ public class Portal : MonoBehaviour
 {
     [SerializeField] private List<Pedestal> _pedestals;
     [SerializeField] private List<Task> _taskList;
+    [SerializeField] private GameObject _portalTrigger;
     
     private void Awake()
     {
@@ -56,7 +57,8 @@ public class Portal : MonoBehaviour
 
     private IEnumerator WaitAndActivate()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.25f);
+        _portalTrigger.SetActive(true);
         Debug.Log("Портал активирован");
     }
     

@@ -145,4 +145,9 @@ public class ItemCore : MonoBehaviour, IInteractable
     {
         Debug.Log($"Объект {itemData.id} был уничтожен!");
     }
+
+    public GameObject GetCopy()
+    {
+        return itemData.prefab;
+    }
 }

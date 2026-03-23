@@ -103,6 +103,7 @@ public class PlayerMovementController : PausedBehaviour
     
     private bool CanMoveTo(Vector3 position)
     {
+        return true;
         Vector3 origin = position + Vector3.up * 0.5f;
 
         // 👉 проверяем, есть ли под ногами что-то

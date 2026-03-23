@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f87f4ddaa582b045bd075cffb04cebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoatSmartArea
+  canMetamorphAndDestroy: 0
 --- !u!114 &8555669156258139821
 MonoBehaviour:
   m_ObjectHideFlags: 0
