@@ -9,6 +9,7 @@ public class MaterialColorChanger : MonoBehaviour
     [SerializeField] private string materialPath = "Materials/Hologram";
     
     private Renderer objectRenderer;
+    private MeshRenderer meshRenderer;
     private Material materialInstance;
 
     // Этот метод вызывается при изменении значений в инспекторе
