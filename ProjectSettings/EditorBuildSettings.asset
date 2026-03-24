@@ -23,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ToTheOtherSIde/Scenes/Level0-5.unity
     guid: 2645102d4aa7fa1408a97b5f4b49060c
+  - enabled: 1
+    path: Assets/ToTheOtherSIde/Scenes/Level1-1.unity
+    guid: a0550e5ee8e4356499b59f9564b0d1d9
+  - enabled: 1
+    path: Assets/ToTheOtherSIde/Scenes/Level1-2.unity
+    guid: d5af17b90fd2ae444ad2ff93db5f2943
+  - enabled: 1
+    path: Assets/ToTheOtherSIde/Scenes/Level1-3.unity
+    guid: d047a921679a4604390f7d293a1d23bb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
