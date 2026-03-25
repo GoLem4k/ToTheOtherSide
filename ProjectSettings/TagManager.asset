@@ -7,6 +7,7 @@ TagManager:
   - PuzzleObject
   - SpawnPoint
   - GrabPointer
+  - Item
   layers:
   - Default
   - TransparentFX

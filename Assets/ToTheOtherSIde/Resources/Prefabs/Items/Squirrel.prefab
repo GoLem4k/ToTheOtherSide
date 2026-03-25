@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4459328829030953442}
   m_Layer: 7
   m_Name: Squirrel
-  m_TagString: PuzzleObject
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

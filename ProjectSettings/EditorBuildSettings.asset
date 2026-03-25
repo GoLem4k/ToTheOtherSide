@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ToTheOtherSIde/Scenes/Demo.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/ToTheOtherSIde/Scenes/Level0-1.unity
     guid: 98a8fbb9fb491ec46a6450d29ddd69fd
   - enabled: 1
@@ -32,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ToTheOtherSIde/Scenes/Level1-3.unity
     guid: d047a921679a4604390f7d293a1d23bb
+  - enabled: 1
+    path: Assets/ToTheOtherSIde/Scenes/Demo.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
