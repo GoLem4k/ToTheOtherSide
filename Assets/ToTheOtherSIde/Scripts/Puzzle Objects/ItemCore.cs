@@ -143,6 +143,8 @@ public class ItemCore : MonoBehaviour, IInteractable
 
     public void OnDestroy()
     {
+        _container?.RemoveItem(this);
+        _container = null;
         Debug.Log($"Объект {itemData.id} был уничтожен!");
     }
 

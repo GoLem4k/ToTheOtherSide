@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Squirrel
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: "\u0411\u0435\u043B\u043E\u0447\u043A\u0430"
-  prefab: {fileID: 8239326646306858622, guid: 1135daa8a7a6e7a408605b3f7ae50320, type: 3}
+  prefab: {fileID: 7422636426877543851, guid: 01a3a149480cad441bca085b6f34314a, type: 3}
   icon: {fileID: 0}
   type: 6
   destroyedByType: 3
