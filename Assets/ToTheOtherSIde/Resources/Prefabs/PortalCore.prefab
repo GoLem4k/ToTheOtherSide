@@ -238,14 +238,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Portal
   _pedestals:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _taskList:
-  - ItemType: 2
-    ItemAmount: 1
-  - ItemType: 3
-    ItemAmount: 3
+  - ItemType: 0
+    ItemAmount: 0
   _portalTrigger: {fileID: 6160651454709767574}
 --- !u!4 &9059312704486311799 stripped
 Transform:

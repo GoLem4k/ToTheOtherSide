@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Grain
   m_EditorClassIdentifier: 
   id: "\u0417\u0435\u0440\u043D\u043E"
-  prefab: {fileID: 2255814444334194495, guid: ea3ee6d1aa48bcc4f9d80cabc806fa75, type: 3}
+  prefab: {fileID: 5859482656787834893, guid: b647e104d19fb624aa3d09faad7a8e18, type: 3}
   icon: {fileID: 0}
   type: 1
   destroyedByType: 2

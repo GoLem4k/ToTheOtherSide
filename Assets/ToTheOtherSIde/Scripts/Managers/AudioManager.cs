@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : MonoBehaviour, IService
 {
     public static AudioManager Instance { get; private set; }
     
@@ -12,7 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip backgroundMusic;
     [SerializeField] private AudioClip buttonClickSound;
     
-    public void Initialize()
+    public void Init()
     {
         if (Instance == null)
         {

@@ -25,15 +25,12 @@ public class PlayerMovementController : PausedBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-    private void Update()
-    { 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            // Или если нужно обновить CharacterController
-            controller.enabled = false;
-            transform.position = new Vector3(0f, 2f, 0f);
-            controller.enabled = true;
-        }
+    public void TeleportPlayer(Vector3 position, Quaternion rotation)
+    {
+        controller.enabled = false;
+        transform.position = position;
+        transform.rotation = rotation;
+        controller.enabled = true;
     }
     
     protected override void GameFixedUpdate()

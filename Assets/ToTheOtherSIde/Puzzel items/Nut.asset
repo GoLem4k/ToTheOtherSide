@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Nut
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: "\u041E\u0440\u0435\u0445"
-  prefab: {fileID: 5149381190316298081, guid: 6f511b0a7603a934e80a316d17c81c45, type: 3}
+  prefab: {fileID: 8672545053571362851, guid: 42b7e01322902d74386e7590d5cb04c8, type: 3}
   icon: {fileID: 0}
   type: 4
   destroyedByType: -1

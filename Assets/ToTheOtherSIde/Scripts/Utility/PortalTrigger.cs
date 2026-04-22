@@ -1,21 +1,20 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PortalTrigger : MonoBehaviour
 {
-    [SerializeField] private string nextScene;
-    [SerializeField] private float teleportDelay = 1f;
-    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Invoke("LoadNextScene", teleportDelay);
+            // Откладываем на следующий кадр
+            StartCoroutine(LoadNextLevelDelayed());
         }
     }
     
-    private void LoadNextScene()
+    private IEnumerator LoadNextLevelDelayed()
     {
-        SceneManager.LoadScene(nextScene);
+        yield return null;
+        G.GameManager.LoadNextLevel();
     }
 }

@@ -1,23 +1,27 @@
+using System.Collections;
 using UnityEngine;
 
 // Состояние инициализации игры
-public class InitGameState : GameState
+public class LoadLevel : GameState
 {
     private float loadingProgress = 0f;
     private bool isLoadingComplete = false;
     
-    public InitGameState(GameStateMachine stateMachine) : base(stateMachine) { }
+    private GameObject currentLevel = null;
+    private GameObject player = null;
+    
+    public LoadLevel(GameStateMachine stateMachine) : base(stateMachine) { }
     
     public override void Enter()
     {
-        Debug.Log("[InitState] Enter - Инициализация игры...");
+        Debug.Log("[InitState] Enter - Загрузка уровня...");
         
         // Сбрасываем флаги
         loadingProgress = 0f;
         isLoadingComplete = false;
         
         // Начинаем инициализацию
-        InitializeGame();
+        Load();
     }
     
     public override void Exit()
@@ -41,46 +45,36 @@ public class InitGameState : GameState
                 stateMachine.ChangeState<GameplayGameState>();
             }
             
-            // Здесь можно обновлять UI загрузки
             UIManager.Instance?.UpdateLoadingProgress(loadingProgress);
         }
     }
     
-    private void InitializeGame()
+    public void Load()
     {
-        Debug.Log("[InitState] Загрузка настроек...");
+        Debug.Log("[LoadLevel] Загрузка...");
         
-        // Загрузка настроек игры
-        GameSettings.LoadSettings();
-        
-        // Инициализация менеджеров
-        SaveSystem.Initialize();
-        AudioManager.Instance?.Initialize();
-        
-        // Загрузка префабов и ресурсов
-        DataManager.Instance?.LoadResources();
-        
-        // Подготовка UI
-        UIManager.Instance?.ShowLoadingScreen();
-
+        //G.GameManager.CurrentLevel = GameObject.Instantiate(G.GameManager.GetCurrentLevelPrefab());
         // Спавн игрока
         SpawnPlayer();
         
-        Debug.Log("[InitState] Все системы инициализированы");
+        Debug.Log("[LoadLevel] Уровень загружен");
     }
     
     private void SpawnPlayer()
     {
+        if (G.GameManager.IsMainMenu()) return;
         // Поиск точки спавна
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
         Vector3 spawnPosition = spawnPoint != null ? spawnPoint.transform.position : Vector3.zero;
+        Quaternion spawnRotation = spawnPoint != null ? spawnPoint.transform.rotation : Quaternion.identity;
         
         // Загрузка префаба игрока
         GameObject playerPrefab = Resources.Load<GameObject>("Prefabs/Player");
         
         if (playerPrefab != null)
-        {
-            GameObject.Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
+        { 
+            Debug.Log(spawnPosition + " " + spawnRotation);
+            GameObject.Instantiate(playerPrefab, spawnPosition, spawnRotation);
             Debug.Log("[GameplayState] Игрок создан");
         }
         else
@@ -142,7 +136,7 @@ public class GameplayGameState : GameState
     private void HandleInput()
     {
         // Пауза
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             stateMachine.ChangeState<PauseGameState>();
         }
@@ -179,7 +173,7 @@ public class GameplayGameState : GameState
     }
 }
 
-// Дополнительное состояние паузы (опционально)
+// состояние паузы
 public class PauseGameState : GameState
 {
     public PauseGameState(GameStateMachine stateMachine) : base(stateMachine) { }
@@ -200,8 +194,7 @@ public class PauseGameState : GameState
     
     public override void Update()
     {
-        // Выход из паузы по нажатию Escape
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("Попытка выйти из паузы");
             stateMachine.ChangeState<GameplayGameState>();

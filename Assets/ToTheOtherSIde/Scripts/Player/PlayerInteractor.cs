@@ -95,6 +95,16 @@ public class PlayerInteractor : MonoBehaviour
             handsGrab.SetActive(false);
             handsDefault.SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            G.GameManager.ReloadLevel();
+        }
+        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            G.GameManager.LoadMainMenu();
+        }
     }
 
     private void TryInteract()

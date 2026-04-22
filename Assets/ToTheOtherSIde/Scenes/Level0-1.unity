@@ -394,7 +394,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1233037916}
+  - {fileID: 1281662329}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1725,6 +1725,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 193242327}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &197887138
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.5765415, g: 0.3998266, b: 0.7694801, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &203197760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,51 +1889,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 206212235}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &215775409
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.5249086, g: 0.6747395, b: 0.5278571, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &216541018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2529,7 +2529,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2027963575}
+  - {fileID: 710727224}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2685,51 +2685,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 283913336}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &286032048
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.87503946, g: 0.63328385, b: 0.44331664, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &293047309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2977,51 +2932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908901fc10fdb574cb34935e71e5e146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &323968416
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.95668197, g: 0.5347237, b: 0.27849883, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &328500659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3169,7 +3079,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 330173133}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &376515981
+--- !u!21 &350113802
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -3211,7 +3121,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Main_Color: {r: 0.5751619, g: 0.36921483, b: 0.096614, a: 1}
+    - _Main_Color: {r: 0.018329859, g: 0.68622637, b: 0.41538554, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!1001 &384945727
@@ -3448,7 +3358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1723029702}
+  - {fileID: 2108439820}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5856,37 +5766,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 695939781}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &700996383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 700996384}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: SpawnPoint
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &700996384
+--- !u!4 &700996384 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+  m_PrefabInstance: {fileID: 4330368172374913907}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700996383}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 319172553}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &701069113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6019,6 +5903,96 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 707260557}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &709110245
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.12370956, g: 0.98681784, b: 0.9640169, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!21 &710727224
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.9873394, g: 0.6316055, b: 0.20543659, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &757483048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7738,7 +7712,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 286032048}
+  - {fileID: 1198159713}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9887,7 +9861,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1451031483}
+  - {fileID: 1914540142}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10150,7 +10124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1470349482}
+  - {fileID: 1672241143}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10174,51 +10148,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!21 &1168021033
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.8053895, g: 0.11695349, b: 0.55626935, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1172632319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10686,6 +10615,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191277534}
   m_CullTransparentMesh: 1
+--- !u!21 &1198159713
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.9983809, g: 0.39031166, b: 0.49556667, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1205351163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10884,51 +10858,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1223985263}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1233037916
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.38271314, g: 0.8723544, b: 0.3719862, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1234382314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11467,6 +11396,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1277228530}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1281662329
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.23023033, g: 0.45888668, b: 0.1845895, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1285460700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11631,51 +11605,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1293106143}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1295621118
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.68268645, g: 0.051786065, b: 0.18920648, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!4 &1321009408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6730489054212216597, guid: c48d5120ec5523e4db600f60a5cec707, type: 3}
@@ -12188,6 +12117,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1372860676}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1381864264
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.25380832, g: 0.60927624, b: 0.6859704, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1396456783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12716,51 +12690,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1432055114}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1451031483
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.5415186, g: 0.74596596, b: 0.56086797, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1469947439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12835,51 +12764,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1469947439}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1470349482
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.5623328, g: 0.8649628, b: 0.3880424, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1474319956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13474,6 +13358,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6697929968479149205, guid: f1839f40668d77646af1e633bc873c34, type: 3}
   m_PrefabInstance: {fileID: 1506489050}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1507693543
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.054360747, g: 0.61006767, b: 0.05904281, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1528750221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13774,7 +13703,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2030556674}
+  - {fileID: 1507693543}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14494,7 +14423,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1168021033}
+  - {fileID: 350113802}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15114,6 +15043,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1654740287}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1672241143
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.55094, g: 0.07465708, b: 0.44322985, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1683748905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15444,51 +15418,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6697929968479149205, guid: f1839f40668d77646af1e633bc873c34, type: 3}
   m_PrefabInstance: {fileID: 1720691342}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1723029702
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.39042133, g: 0.4412939, b: 0.04267931, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1726852287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15942,6 +15871,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 1761723978}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1768529063
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.8623804, g: 0.83490324, b: 0.019237518, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1773212691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16153,51 +16127,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6697929968479149205, guid: f1839f40668d77646af1e633bc873c34, type: 3}
   m_PrefabInstance: {fileID: 1794456411}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1798548442
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.40239924, g: 0.28988665, b: 0.48885518, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1803885612
 GameObject:
   m_ObjectHideFlags: 0
@@ -16300,7 +16229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 376515981}
+  - {fileID: 1381864264}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16558,7 +16487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1798548442}
+  - {fileID: 197887138}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17470,6 +17399,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6697929968479149205, guid: f1839f40668d77646af1e633bc873c34, type: 3}
   m_PrefabInstance: {fileID: 1911773923}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1914540142
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.49376518, g: 0.9200289, b: 0.8819827, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1923971720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17752,6 +17726,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954276871}
   m_CullTransparentMesh: 1
+--- !u!21 &1955654728
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.29190522, g: 0.9298935, b: 0.20638907, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1965012079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18082,96 +18101,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3118514870441566152, guid: 9aeac1d8f1eb45a48988c27cb1befbe7, type: 3}
   m_PrefabInstance: {fileID: 2023344639}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &2027963575
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.88218987, g: 0.69673014, b: 0.96732247, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
---- !u!21 &2030556674
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram
-  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Effect_Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Main_Color: {r: 0.08884919, g: 0.96918786, b: 0.84118164, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &2032187063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18616,6 +18545,51 @@ Transform:
   - {fileID: 203197761}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &2108439820
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram
+  m_Shader: {fileID: -6465566751694194690, guid: 9e8625c4add34d74baa1fa90bdcfd58d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Effect_Power: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Main_Color: {r: 0.51076156, g: 0.82809055, b: 0.27069646, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &2109814720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20520,6 +20494,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5957790755647137751, guid: 2f67fbb1e16264e4ba9e454e3b2407a5, type: 3}
   m_PrefabInstance: {fileID: 2690344568325997216}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4330368172374913907
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 319172553}
+    m_Modifications:
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688933405098010269, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015886362064107569, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c29d382ad64bc7f478dab3ce6faf1718, type: 3}
 --- !u!1001 &6054709586129839724
 PrefabInstance:
   m_ObjectHideFlags: 0

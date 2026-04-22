@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fox
   m_EditorClassIdentifier: 
   id: "\u041B\u0438\u0441\u0438\u0447\u043A\u0430"
-  prefab: {fileID: 5854979400522192, guid: 7b2107d888bd941469c58a6f5cb9a2c8, type: 3}
+  prefab: {fileID: 8629882844563134559, guid: 7b2107d888bd941469c58a6f5cb9a2c8, type: 3}
   icon: {fileID: 0}
   type: 3
   destroyedByType: -1

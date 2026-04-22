@@ -1,36 +1,73 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IService
 {
-    public static GameManager Instance { get; private set; }
-    
     private GameStateMachine gameStateMachine;
     
     [Header("Настройки")]
     [SerializeField] private bool startGameOnAwake = true;
-    [SerializeField] private GameState initialState = GameState.Init;
+    [SerializeField] private GameState initialState = GameState.LoadLevel;
+    [SerializeField] private LevelList levelList;
+    
+    private int levelIndex = 0;
+
+    public void LoadNextLevel()
+    {  
+        IncreaseLevelIndex();
+        Debug.Log(levelList.levelsScenes[levelIndex]);
+        SceneManager.LoadScene(levelList.levelsScenes[levelIndex]);
+        StartCoroutine(SetLoadState());
+    }
+
+    public void LoadFirstLevel()
+    {
+        SceneManager.LoadScene(levelList.levelsScenes[0]);
+        StartCoroutine(SetLoadState());
+    }
+    
+    public bool IsMainMenu()
+    {
+        return SceneManager.GetActiveScene().name == "MainMenu";
+    }
+    
+    public IEnumerator SetLoadState()
+    {
+        yield return new WaitForSeconds(1f);
+        gameStateMachine?.ChangeState<LoadLevel>();
+    }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(levelList.levelsScenes[levelIndex]);
+        StartCoroutine(SetLoadState());
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    
+
+    public void IncreaseLevelIndex()
+    {
+        levelIndex++;
+    }
     
     public enum GameState
     {
-        Init,
+        LoadLevel,
         Gameplay,
         Pause
     }
     
-    private void Awake()
+    public void Init()
     {
-        // Синглтон
-        if (Instance == null)
-        {
-            Instance = this;
-            //DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        levelIndex = 0;
+        levelList = Resources.Load<LevelList>("LevelList/Levels");
         // Инициализация StateMachine
         InitializeStateMachine();
     }
@@ -40,7 +77,7 @@ public class GameManager : MonoBehaviour
         if (startGameOnAwake)
         {
             // Запускаем с состояния Init
-            gameStateMachine.ChangeState<InitGameState>();
+            gameStateMachine.ChangeState<LoadLevel>();
         }
     }
     
@@ -49,7 +86,7 @@ public class GameManager : MonoBehaviour
         gameStateMachine = new GameStateMachine();
         
         // Добавляем все состояния
-        gameStateMachine.AddState(new InitGameState(gameStateMachine));
+        gameStateMachine.AddState(new LoadLevel(gameStateMachine));
         gameStateMachine.AddState(new GameplayGameState(gameStateMachine));
         gameStateMachine.AddState(new PauseGameState(gameStateMachine));
         
@@ -90,7 +127,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         // Сначала в Init, потом автоматически в Gameplay
-        gameStateMachine?.ChangeState<InitGameState>();
+        gameStateMachine?.ChangeState<LoadLevel>();
     }
     
     // Получение текущего состояния

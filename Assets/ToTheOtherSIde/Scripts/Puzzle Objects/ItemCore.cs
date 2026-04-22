@@ -60,7 +60,7 @@ public class ItemCore : MonoBehaviour, IInteractable
         _container?.RemoveItem(this);
         _container = null;
 
-        transform.SetParent(interactor.transform.Find("Body/GrabPointer"));
+        transform.SetParent(interactor.transform.Find("GrabPointer"));
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         
