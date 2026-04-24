@@ -15,7 +15,7 @@ public class PlayerRotationController : PausedBehaviour
 
         xRotation = 0f;
         transform.localRotation = Quaternion.identity;
-        playerBody.rotation = Quaternion.identity;
+        //playerBody.rotation = Quaternion.identity;
 
         // Съедаем первый импульс мыши (Unity иногда даёт "мусор" на старте)
         //Input.GetAxis("Mouse X");

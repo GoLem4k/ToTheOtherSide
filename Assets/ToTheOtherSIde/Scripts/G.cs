@@ -3,6 +3,7 @@ using UnityEngine;
 public static class G 
 {
     public static AudioManager AudioManager;
+    public static SceneLoader SceneLoader;
     public static GameManager GameManager;
 }
 
@@ -18,8 +19,9 @@ public static class GameBootstrapper
         
         serviceHolder = new GameObject("===Managers==="); 
         Object.DontDestroyOnLoad(serviceHolder);
-        
+
         G.AudioManager = CreateSimpleService<AudioManager>();
+        G.SceneLoader = CreateSimpleService<SceneLoader>();
         G.GameManager = CreateSimpleService<GameManager>();
         //G.GameState = CreateSimpleService<GameState>();
     }
